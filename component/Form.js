@@ -17,7 +17,7 @@ const Form = () => {
     try {
       axios({
         method: 'post',
-        url: `${process.env.HOST_API}/api/question`,
+        url: '/api/booking/create',
         data: {
           nama: nama,
           tlpn: tlpn,
@@ -28,7 +28,7 @@ const Form = () => {
           pesan: pesan,
         },
       }).then((res) => {
-        // console.log(res)
+        console.log(res)
       })
       Swal.fire({
         title: 'Pesanan',
